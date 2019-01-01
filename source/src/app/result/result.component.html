@@ -1,0 +1,28 @@
+<div class='container-fluid h-100 d-flex flex-column align-items-center'>
+  <div class='container text-center d-flex justify-content-center align-items-center mt-5 mb-5'>
+    <a class='h1 text-primary'>
+      Here's your search results:
+    </a>
+  </div>
+  <div class='d-grid border-box mt-5 grid-template-responsive'>
+    <div *ngFor='let item of data'>
+      <a (click)='showDetails(item)'>
+        <img class='w-100 h-100' [src]='item.links[0].href' />
+      </a>
+    </div>
+  </div>
+</div>
+<!-- <div class='card'>
+        <img class='card-img-top' [src]='item.links[0].href' alt='NASA API Picture' />
+        <div class='card-body'>
+          <a class='h5 card-title'>
+            {{item.data[0].title}}
+          </a>
+          <p class='card-text'>
+            {{item.data[0].description}}
+          </p>
+          <a href='#' class='btn btn-primary'>
+            Check it out!
+          </a>
+        </div>
+      </div> -->

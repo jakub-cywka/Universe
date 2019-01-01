@@ -1,0 +1,33 @@
+<div *ngIf='shouldExpandView === false' class='container-fluid h-100 d-flex justify-content-center align-items-center'>
+  <div class='card w-auto'>
+    <img class='card-img-top' [src]='image.links[0].href' alt='NASA API picture.' />
+    <div class='card-body'>
+      <h5 class='card-title'>
+        {{image.data[0].title}}
+      </h5>
+      <p class='card-text'>
+        {{image.data[0].description}}
+      </p>
+      <a (click)='expandView()' class='btn btn-info'>
+        Check it out!
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class='container-fluid h-100 d-flex flex-column justify-content-center align-items-center' *ngIf='shouldExpandView === true'>
+  <div class='container d-flex flex-column justify-content-center align-items-center'>
+    <img [src]='image.links[0].href' class='img-responsive' />
+  </div>
+  <div class='container flex-column d-flex justify-content-center align-items-center mt-5'>
+    <a class='h1 text-primary'>
+      "{{image.data[0].title}}"
+    </a>
+    <a class='h3 mt-2'>
+      {{image.data[0].description}}
+    </a>
+    <a class='h3 mt-2'>
+      Captured by: <strong *ngIf='image.data[0].author'>{{image.data[0].author}}</strong><strong *ngIf='image.data[0].author === undefined'>NASA / Unknown</strong>
+    </a>
+  </div>
+</div>
