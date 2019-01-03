@@ -18,7 +18,6 @@ export class SearchComponent implements OnInit {
   constructor(private router: Router) { }
 
   public getImage(event?: KeyboardEvent) {
-    // the user clicked on input
     if (event) {
       if (event.key === 'Enter') {
         if (this.typed !== '' || this.typed !== null || this.typed !== undefined) {
@@ -29,9 +28,7 @@ export class SearchComponent implements OnInit {
           });
         }
       }
-      // Btn case
-    } else {
-      if (this.typed !== '' || this.typed !== undefined || this.typed !== null) {
+    } else if (this.typed !== '' || this.typed !== undefined || this.typed !== null) {
         Axios.get(`https://images-api.nasa.gov/search?q=${this.typed}&media_type=image`).then(response => {
             this.data = response.data.collection.items;
             data = this.data;
@@ -39,7 +36,6 @@ export class SearchComponent implements OnInit {
           });
       }
     }
-  }
   ngOnInit() {
   }
 
