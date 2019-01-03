@@ -1,12 +1,12 @@
 <div class='container-fluid background-nasa h-100 d-flex flex-column justify-content-center align-items-center'>
   <div class='container-fluid text-center'>
-    <a class='h2 text-info'>
+    <h2 class='text-info'>
       Enter our galaxy and begin Your yourney to discover the places you've never heard of 🚀
-    </a>
+    </h2>
   </div>
   <div class='container mt-5'>
     <div class='input-group input-group-lg'>
-      <input type='text' [(ngModel)]='typed' class='form-control' placeholder='Type anything space-related here...' />
+      <input type='text' [(ngModel)]='typed' class='form-control' (keydown)='getImage($event)' placeholder='Type anything space-related here...' />
       <div class='input-group-append'>
         <button (click)='getImage()' class='btn btn-success' type='button'>
           Begin!
@@ -15,3 +15,29 @@
     </div>
   </div>
 </div>
+
+<!-- data-toggle='modal' data-target='#alert-modal' -->
+<!-- <div *ngIf='shouldCreateModal === true' class='modal fade' id='alert-modal' aria-labelledby='alertModalContainer' role='dialog' tabindex='-1'>
+  <div class='modal-dialog' role='document'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title'>
+          Alert
+        </h5>
+        <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+          <span aria-hidden='true'>&times;</span>
+        </button>
+      </div>
+      <div class='modal-body'>
+        <p>
+          You need to type something first.
+        </p>
+      </div>
+      <div class='modal-footer'>
+        <button type='button' class='btn btn-primary' data-dismiss='modal'>
+          Ok, i understand
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -15,18 +15,18 @@
   </div>
 </div>
 
-<div class='container-fluid h-100 d-flex flex-column justify-content-center align-items-center' *ngIf='shouldExpandView === true'>
-  <div class='container d-flex flex-column justify-content-center align-items-center'>
-    <img [src]='image.links[0].href' class='img-responsive' />
+<div *ngIf='shouldExpandView === true' class='w-100 h-100 d-flex text-center flex-column justify-content-center align-items-center'>
+  <div class='w-auto h-auto'>
+    <img *ngIf='image.links[0].href' [src]='image.links[0].href' class='image-responsive' />
   </div>
-  <div class='container flex-column d-flex justify-content-center align-items-center mt-5'>
-    <a class='h1 text-primary'>
+  <div class='w-100 h-auto d-flex flex-column justify-content-center text-center align-items-center mt-2'>
+    <a class='h4 text-primary'>
       "{{image.data[0].title}}"
     </a>
-    <a class='h3 mt-2'>
+    <a class='h5 mt-1'>
       {{image.data[0].description}}
     </a>
-    <a class='h3 mt-2'>
+    <a class='h5 mt-1'>
       Captured by: <strong *ngIf='image.data[0].author'>{{image.data[0].author}}</strong><strong *ngIf='image.data[0].author === undefined'>NASA / Unknown</strong>
     </a>
   </div>

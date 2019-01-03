@@ -12,8 +12,9 @@ export let image: any;
 export class ResultComponent implements OnInit {
 
   data: any[] = data;
+  dataLength: number;
   constructor(private router: Router) {
-    console.log(this.data);
+    this.dataLength = this.data.length;
   }
 
   showDetails(_image: any) {
