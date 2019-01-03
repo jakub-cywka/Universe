@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Axios from 'axios';
 import { Router } from '@angular/router';
+import { language } from '../app.component';
 
 export let data: any[];
 
@@ -11,6 +12,7 @@ export let data: any[];
 })
 export class SearchComponent implements OnInit {
 
+  public language: string = language;
   public data: any[];
   public typed: string;
   public apiUrl: 'https://images-api.nasa.gov/search';

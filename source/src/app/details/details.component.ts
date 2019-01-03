@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { image } from '../result/result.component';
+import { language } from '../app.component';
 
 @Component({
   selector: 'app-details',
@@ -9,15 +10,16 @@ import { image } from '../result/result.component';
 })
 export class DetailsComponent implements OnInit {
 
-  image: any = image;
-  shouldExpandView = false;
+  public language: string = language;
+  public image: any = image;
+  public shouldExpandView = false;
   constructor() {
     if (this.image) {
       console.log(this.image);
     }
   }
 
-  expandView() {
+  public expandView() {
     this.shouldExpandView = true;
   }
 

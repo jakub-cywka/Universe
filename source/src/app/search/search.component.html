@@ -1,4 +1,4 @@
-<div class='container-fluid background-nasa h-100 d-flex flex-column justify-content-center align-items-center'>
+<div *ngIf='language === "en-US"' class='container-fluid background-nasa h-100 d-flex flex-column justify-content-center align-items-center'>
   <div class='container-fluid text-center'>
     <h2 class='text-info'>
       Enter our galaxy and begin Your yourney to discover the places you've never heard of 🚀
@@ -10,6 +10,24 @@
       <div class='input-group-append'>
         <button (click)='getImage()' class='btn btn-success' type='button'>
           Begin!
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf='language === "pl-PL"' class='container-fluid background-nasa h-100 d-flex flex-column justify-content-center align-items-center'>
+  <div class='container-fluid text-center'>
+    <h2 class='text-info'>
+      Wkrocz do naszej galaktyki i rozpocznij swoją przygodę by poznać miejsca, o których nigdy nic nie słyszałes 🚀
+    </h2>
+  </div>
+  <div class='container mt-5'>
+    <div class='input-group input-group-lg'>
+      <input type='text' [(ngModel)]='typed' class='form-control' (keydown)='getImage($event)' placeholder='Wpisz tutaj cokolwiek powiązanego z kosmosem...' />
+      <div class='input-group-append'>
+        <button (click)='getImage()' class='btn btn-success' type='button'>
+          Rozpocznij!
         </button>
       </div>
     </div>
