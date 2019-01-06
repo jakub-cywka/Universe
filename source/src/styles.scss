@@ -33,7 +33,7 @@ html, body, app-root {
     }
     .image-responsive {
         width: auto !important;
-        height: 224px !important;
+        height: 256px !important;
     }
 }
 
@@ -44,7 +44,7 @@ html, body, app-root {
     }
     .image-responsive {
         width: auto !important;
-        height: 256px !important;
+        height: 384px !important;
     }
 }
 
@@ -55,7 +55,7 @@ html, body, app-root {
     }
     .image-responsive {
         width: auto !important;
-        height: 512px !important;
+        height: 480px !important;
     }
 }
 
@@ -66,7 +66,7 @@ html, body, app-root {
     }
     .image-responsive {
         width: auto !important;
-        height: 768px !important;
+        height: 512px !important;
     }
 }
 
@@ -83,7 +83,7 @@ html, body, app-root {
 }
 
 .background-nasa {
-    background-image: './assets/image.jpg' !important;
+    background-image: url('https://giznet.pl/wp-content/uploads/2014/09/SLS-1-by-nasa.jpg') !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center !important;

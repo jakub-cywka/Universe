@@ -13,11 +13,7 @@ export class DetailsComponent implements OnInit {
   public language: string = language;
   public image: any = image;
   public shouldExpandView = false;
-  constructor() {
-    if (this.image) {
-      console.log(this.image);
-    }
-  }
+  constructor() { }
 
   public expandView() {
     this.shouldExpandView = true;

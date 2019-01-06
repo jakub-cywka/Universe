@@ -8,7 +8,5 @@ export const language: string = navigator.language;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor() {
-    console.log(language);
-  }
+  constructor() { }
 }
